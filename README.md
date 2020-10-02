@@ -31,15 +31,15 @@ ___
 
 <img alt="Info Tasks" src="./Screenshots/InfoTasks.png">
                           
-<img alt="screenshot01" src="./Screenshots/CriticalTasks.png">
+<img alt="Critical Tasks" src="./Screenshots/CriticalTasks.png">
                           
-<img alt="screenshot01" src="./Screenshots/WarningTasks.png">
+<img alt="Warning Tasks" src="./Screenshots/WarningTasks.png">
                            
-<img alt="screenshot01" src="./Screenshots/SucceedTasks.png">
+<img alt="Succeed Tasks" src="./Screenshots/SucceedTasks.png">
                            
-<img alt="screenshot01" src="./Screenshots/Settings.png">
+<img alt="Settings" src="./Screenshots/Settings.png">
    
-<img alt="screenshot18" src="./Screenshots/About.png">
+<img alt="About" src="./Screenshots/About.png">
 
 </div>
 
