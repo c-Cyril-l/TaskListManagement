@@ -29,17 +29,17 @@ ___
 
 <div align="center">
 
-<img alt="Info Tasks" src="./Screenshots/InfoTasks.png">
+<img alt="Info Tasks" src="./Screenshots/InfoTasks.PNG">
                           
-<img alt="Critical Tasks" src="./Screenshots/CriticalTasks.png">
+<img alt="Critical Tasks" src="./Screenshots/CriticalTasks.PNG">
                           
-<img alt="Warning Tasks" src="./Screenshots/WarningTasks.png">
+<img alt="Warning Tasks" src="./Screenshots/WarningTasks.PNG">
                            
-<img alt="Succeed Tasks" src="./Screenshots/SucceedTasks.png">
+<img alt="Succeed Tasks" src="./Screenshots/SucceedTasks.PNG">
                            
-<img alt="Settings" src="./Screenshots/Settings.png">
+<img alt="Settings" src="./Screenshots/Settings.PNG">
    
-<img alt="About" src="./Screenshots/About.png">
+<img alt="About" src="./Screenshots/About.PNG">
 
 </div>
 
