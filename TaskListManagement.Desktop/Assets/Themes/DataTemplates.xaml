@@ -1,0 +1,24 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewModels="clr-namespace:TaskListManagement.Desktop.ViewModels"
+    xmlns:views="clr-namespace:TaskListManagement.Desktop.Views">
+    <DataTemplate DataType="{x:Type viewModels:InfoTaskViewModel}">
+        <views:InfoTaskView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModels:CriticalTaskViewModel}">
+        <views:CriticalTaskView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModels:WarningTaskViewModel}">
+        <views:WarningTaskView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModels:SucceedTaskViewModel}">
+        <views:SucceedTaskView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModels:SettingViewModel}">
+        <views:SettingView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModels:AboutViewModel}">
+        <views:AboutView />
+    </DataTemplate>
+</ResourceDictionary>

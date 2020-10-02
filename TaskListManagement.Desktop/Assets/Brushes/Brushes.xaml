@@ -1,0 +1,51 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:fr="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+
+
+    <SolidColorBrush
+        x:Key="BackBrush"
+        fr:Freeze="True"
+        Color="#A5222222" />
+    <SolidColorBrush
+        x:Key="ActionsBackBrush"
+        fr:Freeze="True"
+        Color="#33080808" />
+    <SolidColorBrush
+        x:Key="BorderBrush"
+        fr:Freeze="True"
+        Color="#222222" />
+    <SolidColorBrush
+        x:Key="NavBrush"
+        fr:Freeze="True"
+        Color="#E5222222" />
+    <SolidColorBrush
+        x:Key="InfoTaskBrush"
+        fr:Freeze="True"
+        Color="#6D1E90FF" />
+    <SolidColorBrush
+        x:Key="CriticalTaskBrush"
+        fr:Freeze="True"
+        Color="#6DDC143C" />
+    <SolidColorBrush
+        x:Key="WarningTaskBrush"
+        fr:Freeze="True"
+        Color="#6DFFA500" />
+    <SolidColorBrush
+        x:Key="SuccessTaskBrush"
+        fr:Freeze="True"
+        Color="#6D3CB371" />
+
+    <SolidColorBrush
+        x:Key="TaskFieldsBackBrush"
+        fr:Freeze="True"
+        Color="#66000000" />
+    <SolidColorBrush
+        x:Key="TaskFieldsBorderBrush"
+        fr:Freeze="True"
+        Color="#99000000" />
+
+
+</ResourceDictionary>

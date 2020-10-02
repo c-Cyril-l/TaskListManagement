@@ -1,0 +1,96 @@
+﻿<UserControl
+    x:Class="TaskListManagement.Desktop.Views.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect Duration=0:0:0.3, Kind=SlideInFromRight}">
+
+        <Grid Margin="20">
+            <StackPanel>
+                <TextBlock
+                    FontSize="28"
+                    Foreground="White"
+                    Text="About" />
+
+                <StackPanel Margin="0,30,0,10" Orientation="Vertical">
+                    <TextBlock
+                        Width="850"
+                        Margin="0,0,20,0"
+                        VerticalAlignment="Center"
+                        FontFamily="Trajan"
+                        FontSize="17"
+                        Foreground="WhiteSmoke"
+                        LineHeight="26"
+                        TextWrapping="WrapWithOverflow">
+                        Task Management is a small application lets you manage daily or specific tasks in daily routines, it contains three types of tasks according to your task importancy<LineBreak /><LineBreak />
+                        Task Types :<LineBreak />
+                        -<Italic Foreground="DodgerBlue">Info Tasks</Italic>
+                        : Regular type tasks.<LineBreak />
+                        -<Italic Foreground="Crimson">Critical Tasks</Italic>
+                        : The kind of tasks need to be completed urgently.<LineBreak />
+                        -<Italic Foreground="Orange">Warning Tasks</Italic>
+                        : The kind of tasks need to be completed with lower risk than critical ones.<LineBreak />
+                        -<Italic Foreground="MediumSeaGreen">Succeed Tasks</Italic>
+                        : Whenever you finish any tasks above they will be moved to succeed tasks automatically.<LineBreak /><LineBreak />
+                        Each task type contains two types of actions :<LineBreak />
+                        -<Italic Foreground="Crimson">Delete</Italic>
+                        : Delete will deletes the task<LineBreak />
+                        -<Italic Foreground="MediumSeaGreen">Finish</Italic>
+                        : Finishes the task which means it moves to succeed tasks.<LineBreak /><LineBreak />
+                        &gt; Note : None of the operations in application will be saved automatically until you press save button.<LineBreak /></TextBlock>
+                    <TextBlock
+                        FontSize="17"
+                        FontStyle="Italic"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        Text="For any kind of bugs and suggestions you can reach me out via" />
+                    <StackPanel Orientation="Horizontal">
+                        <Button
+                            Margin="0,15"
+                            HorizontalAlignment="Left"
+                            Command="{Binding EmailMeCommand}"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
+                            ToolTip="Sending An Email To The Author.">
+                            <materialDesign:PackIcon
+                                Width="28"
+                                Height="28"
+                                Kind="Email" />
+                        </Button>
+                        <Button
+                            Margin="10,15"
+                            HorizontalAlignment="Left"
+                            Command="{Binding OpenFacebookProfileCommand}"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
+                            ToolTip="Facebook Profile Of The Author.">
+                            <materialDesign:PackIcon
+                                Width="28"
+                                Height="28"
+                                Kind="Facebook" />
+                        </Button>
+                        <Button
+                            Margin="0,15"
+                            HorizontalAlignment="Left"
+                            Command="{Binding OpenGithubProfileCommand}"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
+                            ToolTip="Github Profile Of The Author.">
+                            <materialDesign:PackIcon
+                                Width="28"
+                                Height="28"
+                                Kind="MicrosoftGithub" />
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+
+
+            </StackPanel>
+
+
+        </Grid>
+
+    </materialDesign:TransitioningContent>
+</UserControl>

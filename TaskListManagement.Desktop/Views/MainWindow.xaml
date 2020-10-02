@@ -1,0 +1,132 @@
+﻿<Window
+    x:Class="TaskListManagement.Desktop.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="1150"
+    Height="720"
+    AllowsTransparency="True"
+    Background="Transparent"
+    BorderBrush="{StaticResource BorderBrush}"
+    BorderThickness="1"
+    DataContext="{StaticResource MainViewModel}"
+    Icon="../TaskManagement.ico"
+    MouseLeftButtonDown="MainWindow_OnMouseLeftButtonDown"
+    ResizeMode="NoResize"
+    TextOptions.TextRenderingMode="Aliased"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:InvokeCommandAction Command="{Binding LoadMainCommand}" />
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Border
+            Grid.Column="0"
+            Background="{StaticResource NavBrush}"
+            BorderBrush="{StaticResource BorderBrush}"
+            BorderThickness="0,0,1,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Row="0"
+                    Margin="0,30,0,30"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+                    <Viewbox
+                        Width="64"
+                        Height="62"
+                        Margin="0,0,0,30">
+                        <Path Data="{StaticResource WorkflowGeometry}" Fill="#FF3E2791" />
+                    </Viewbox>
+                    <TextBlock
+                        FontFamily="Roboto"
+                        FontSize="18"
+                        Foreground="White"
+                        Text="Task Management" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Margin="0,50,0,0"
+                    VerticalAlignment="Stretch">
+                    <ListBox
+                        IsSynchronizedWithCurrentItem="True"
+                        ItemContainerStyle="{StaticResource ListBoxItemContainerStyle}"
+                        ItemTemplate="{StaticResource LitBoxItemTemplate}"
+                        ItemsPanel="{StaticResource ItemsPanelTemplate}"
+                        ItemsSource="{Binding MenuItems, UpdateSourceTrigger=PropertyChanged}"
+                        SelectedItem="{Binding MenuItem}">
+                        <b:Interaction.Triggers>
+                            <b:EventTrigger EventName="SelectionChanged">
+                                <b:InvokeCommandAction Command="{Binding SelectionChangedCommand}" CommandParameter="{Binding}" />
+                            </b:EventTrigger>
+                        </b:Interaction.Triggers>
+                    </ListBox>
+                </StackPanel>
+
+                <Border
+                    Grid.Row="2"
+                    Height="57"
+                    Background="{StaticResource ActionsBackBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="0,1,0,0">
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <StackPanel.Resources>
+                            <Style BasedOn="{StaticResource MaterialDesignFloatingActionMiniButton}" TargetType="Button">
+                                <Setter Property="Width" Value="34" />
+                                <Setter Property="Height" Value="30" />
+                                <Setter Property="HorizontalAlignment" Value="Center" />
+                                <Setter Property="Background" Value="Transparent" />
+                                <Setter Property="BorderBrush" Value="Transparent" />
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="Margin" Value="8,0" />
+                            </Style>
+                        </StackPanel.Resources>
+                        <Button
+                            Command="{Binding ShowAboutCommand}"
+                            Content="{materialDesign:PackIcon Kind=InformationVariant,
+                                                              Size=24}"
+                            ToolTip="About" />
+                        <Button
+                            Command="{Binding ShowSettingsCommand}"
+                            Content="{materialDesign:PackIcon Kind=GearOutline,
+                                                              Size=24}"
+                            ToolTip="Settings" />
+
+                        <Button
+                            Command="{Binding SaveTasksCommand}"
+                            Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                              Size=24}"
+                            ToolTip="Settings" />
+                        <Button
+                            Command="{Binding CloseApplicationCommand}"
+                            Content="{materialDesign:PackIcon Kind=Power,
+                                                              Size=24}"
+                            ToolTip="Close Application" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+        <!-- <StackPanel Grid.Column="1" Background="#AA512DA8"> -->
+        <StackPanel Grid.Column="1" Background="{StaticResource BackBrush}">
+            <ContentControl Content="{Binding Content}" />
+        </StackPanel>
+    </Grid>
+</Window>
